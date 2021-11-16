@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+
+  pre_build:
+    commands:
+      - pip3 install -r requirements.txt
+
+  build:
+    commands:
+      - pytest
+
+  post_build:
+    commands:
+      - mkdir build
+      - copy requirements.txt build/
+
+artifacts:
+
+  files:
+    - '**/*'
+  base-directory: build
