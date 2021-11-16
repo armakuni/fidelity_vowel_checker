@@ -7,10 +7,13 @@ application = Flask(__name__)
 @application.route("/")
 def index():
     letter = request.args.get("letter")
-    if vowel_checker(letter):
-        return "Vowel"
+    if letter == None:
+        return "Please supply a 'letter' in the query string"
     else:
-        return "Not a vowel"
+        if vowel_checker(letter):
+            return "Vowel"
+        else:
+            return "Not a vowel"
 
 if __name__ == '__main__':
     application.run('0.0.0.0', 8123) # this is only used for local development
