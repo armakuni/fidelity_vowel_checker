@@ -12,4 +12,5 @@ def index():
     else:
         return "Not a vowel"
 
-application.run('0.0.0.0', 8123)
+if __name__ == '__main__':
+    application.run('0.0.0.0', 8123) # this is only used for local development
