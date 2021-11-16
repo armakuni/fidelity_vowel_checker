@@ -13,7 +13,7 @@ phases:
   post_build:
     commands:
       - mkdir build
-      - copy requirements.txt build/
+      - cp requirements.txt build/
 
 artifacts:
 
