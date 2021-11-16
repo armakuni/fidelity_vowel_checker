@@ -8,7 +8,7 @@ application = Flask(__name__)
 def index():
     letter = request.args.get("letter")
     if letter == None:
-        return "Please supply a 'letter' in the query string"
+        return "Please supply a 'letter' in the query string <form><input name='letter' /><button>Submit</button></form>"
     else:
         if vowel_checker(letter):
             return "Vowel"
