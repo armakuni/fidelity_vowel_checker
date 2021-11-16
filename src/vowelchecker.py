@@ -5,7 +5,7 @@ def vowel_checker(letter):
   if len(letter) != 1:
     raise ValueError('Invalid input: argument provided did not have length 1')
 
-  vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+  vowels = ['a', 'e', 'i', 'o', 'u']
   if letter in vowels:
     return True
 

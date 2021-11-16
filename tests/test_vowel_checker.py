@@ -1,17 +1,14 @@
 from src import vowelchecker
 
 # Return true if letter is a,e,i,o,u
-# Return false if letter is not a vowel (y IS a vowel)
+# Return false if letter is not a vowel (y is not a vowel)
 # Return an error if not given a letter
-
-def test_return_true_if_letter_is_y():
-  assert vowelchecker.vowel_checker('y') == True
 
 def test_return_true_if_letter_is_a():
   assert vowelchecker.vowel_checker('a') == True
 
 def test_return_false_if_letter_is_not_vowel():
-  consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p','q', 'r', 's', 't', 'v', 'w', 'x', 'z']
+  consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p','q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z']
 
   for letter in consonants:
     assert vowelchecker.vowel_checker(letter) == False
