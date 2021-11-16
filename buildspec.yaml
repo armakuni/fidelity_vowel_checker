@@ -12,9 +12,13 @@ phases:
 
   post_build:
     commands:
+      - pwd
+      - ls -rtla
       - mkdir build
       - cp requirements.txt build/
       - cp src/*.py build/
+      - ls -rtla
+      - df -h
 
 artifacts:
 
