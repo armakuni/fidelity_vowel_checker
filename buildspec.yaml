@@ -9,3 +9,16 @@ phases:
   build:
     commands:
       - pytest
+
+  post_build:
+    commands:
+      - mkdir build
+      - cp requirements.txt build/
+      - cp src/*.py build/
+      - ls -rtla
+
+artifacts:
+
+  files:
+    - '**/*'
+  base-directory: build
